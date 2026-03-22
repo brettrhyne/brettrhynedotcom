@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --green: #3fb950;
+    --red: #f85149;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Editor */
+#editor-container {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.CodeMirror {
+    height: auto;
+    min-height: 120px;
+    max-height: 400px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#controls {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+button {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: var(--border);
+}
+
+#run-btn {
+    background: #238636;
+    border-color: #2ea043;
+}
+
+#run-btn:hover:not(:disabled) {
+    background: #2ea043;
+}
+
+#run-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Output */
+#output-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 60px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 3rem;
+}
+
+#output {
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--text);
+}
+
+.output-error {
+    color: var(--red) !important;
+}
+
+/* Problems */
+#problems {
+    margin-top: 2rem;
+}
+
+.problem-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.problem-card:hover {
+    border-color: var(--accent);
+}
+
+.problem-card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.problem-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.difficulty {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.difficulty.easy {
+    background: rgba(63, 185, 80, 0.15);
+    color: var(--green);
+}
+
+.difficulty.medium {
+    background: rgba(210, 153, 34, 0.15);
+    color: #d29922;
+}
+
+.difficulty.hard {
+    background: rgba(248, 81, 73, 0.15);
+    color: var(--red);
+}
+
+.problem-active {
+    border-color: var(--accent);
+}
+
+.problem-detail {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    display: none;
+}
+
+.problem-active .problem-detail {
+    display: block;
+}
+
+.problem-detail pre {
+    background: var(--bg);
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+}
+
+.problem-detail button {
+    margin-top: 0.5rem;
+}
+
+.load-btn {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+    font-weight: 600;
+}
+
+.load-btn:hover {
+    background: var(--accent-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
