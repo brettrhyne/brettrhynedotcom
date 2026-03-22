@@ -48,37 +48,21 @@ async function runCode() {
     btn.textContent = "Running...";
     outputEl.className = "";
 
+    let output = [];
+
+    // Use Pyodide's native stdout/stderr capture
+    pyodide.setStdout({ batched: (text) => output.push(text) });
+    pyodide.setStderr({ batched: (text) => output.push(text) });
+
     try {
-        // Capture stdout/stderr
-        pyodide.runPython(`
-import sys, io
-sys.stdout = io.StringIO()
-sys.stderr = io.StringIO()
-`);
-
-        pyodide.runPython(code);
-
-        const stdout = pyodide.runPython("sys.stdout.getvalue()");
-        const stderr = pyodide.runPython("sys.stderr.getvalue()");
-
-        let result = "";
-        if (stdout) result += stdout;
-        if (stderr) result += stderr;
-
-        outputEl.textContent = result || "(no output)";
+        await pyodide.runPythonAsync(code);
+        outputEl.textContent = output.join("\n") || "(no output)";
     } catch (e) {
-        outputEl.textContent = e.message;
+        outputEl.textContent = output.join("\n") + "\n" + e.message;
         outputEl.className = "output-error";
     } finally {
         btn.textContent = "Run (Shift+Enter)";
         btn.disabled = false;
-
-        // Reset stdout/stderr
-        pyodide.runPython(`
-import sys
-sys.stdout = sys.__stdout__
-sys.stderr = sys.__stderr__
-`);
     }
 }
 
