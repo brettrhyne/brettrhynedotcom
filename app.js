@@ -5,7 +5,7 @@ let editor = null;
 document.addEventListener("DOMContentLoaded", () => {
     editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
         mode: "python",
-        theme: "dracula",
+        theme: "elegant",
         lineNumbers: true,
         indentUnit: 4,
         tabSize: 4,
@@ -106,3 +106,26 @@ function renderProblems() {
         container.appendChild(card);
     });
 }
+
+// Sparkles
+const sparkleChars = ["\u2728", "\u2B50", "\uD83C\uDF1F", "\u2734\uFE0F", "\u00B7"];
+
+function createSparkle(x, y) {
+    const el = document.createElement("span");
+    el.className = "sparkle";
+    el.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+    el.style.left = (x + (Math.random() - 0.5) * 30) + "px";
+    el.style.top = (y + (Math.random() - 0.5) * 30) + "px";
+    el.style.animationDuration = (1 + Math.random() * 1.5) + "s";
+    document.body.appendChild(el);
+    el.addEventListener("animationend", () => el.remove());
+}
+
+let sparkleTimer = 0;
+document.addEventListener("mousemove", (e) => {
+    const now = Date.now();
+    if (now - sparkleTimer > 80) {
+        sparkleTimer = now;
+        createSparkle(e.clientX, e.clientY);
+    }
+});

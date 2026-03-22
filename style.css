@@ -5,15 +5,15 @@
 }
 
 :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-muted: #8b949e;
-    --accent: #58a6ff;
-    --accent-hover: #79c0ff;
-    --green: #3fb950;
-    --red: #f85149;
+    --bg: #fff0f5;
+    --surface: #ffffff;
+    --border: #f0c0d0;
+    --text: #4a2040;
+    --text-muted: #9a6080;
+    --accent: #e84393;
+    --accent-hover: #fd79a8;
+    --green: #00b894;
+    --red: #d63031;
 }
 
 body {
@@ -126,12 +126,13 @@ button:hover:not(:disabled) {
 }
 
 #run-btn {
-    background: #238636;
-    border-color: #2ea043;
+    background: #e84393;
+    border-color: #d63384;
+    color: #fff;
 }
 
 #run-btn:hover:not(:disabled) {
-    background: #2ea043;
+    background: #fd79a8;
 }
 
 #run-btn:disabled {
@@ -247,7 +248,7 @@ button:hover:not(:disabled) {
 .load-btn {
     background: var(--accent);
     border-color: var(--accent);
-    color: #000;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -261,4 +262,24 @@ footer {
     color: var(--text-muted);
     border-top: 1px solid var(--border);
     margin-top: 2rem;
+}
+
+/* Sparkles */
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 16px;
+    z-index: 9999;
+    animation: sparkle-fall linear forwards;
+}
+
+@keyframes sparkle-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(120px) rotate(360deg) scale(0);
+    }
 }
