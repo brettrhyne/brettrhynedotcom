@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    loadPyodide();
+    initPyodide();
     renderProblems();
 
     document.getElementById("run-btn").addEventListener("click", runCode);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Load Pyodide
-async function loadPyodide() {
+async function initPyodide() {
     const btn = document.getElementById("run-btn");
     try {
         pyodide = await globalThis.loadPyodide();
