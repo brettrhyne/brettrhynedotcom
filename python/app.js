@@ -153,7 +153,7 @@ function clearOutput() {
 }
 
 // Flowers
-const flowerChars = ["\uD83C\uDF38", "\uD83C\uDF3A", "\uD83C\uDF3B", "\uD83C\uDF37", "\uD83C\uDF3C", "\uD83C\uDF39"];
+const flowerChars = ["\uD83E\uDD95", "\uD83E\uDD96", "\uD83E\uDD8E"];
 
 function createFlower(x, y) {
     const el = document.createElement("span");
