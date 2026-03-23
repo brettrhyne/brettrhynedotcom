@@ -253,7 +253,7 @@ footer {
 .sparkle {
     position: fixed;
     pointer-events: none;
-    font-size: 32px;
+    font-size: 16px;
     z-index: 9999;
     animation: sparkle-fall linear forwards;
 }
@@ -261,7 +261,7 @@ footer {
 @keyframes sparkle-fall {
     0% {
         opacity: 1;
-        transform: translateY(0) rotate(0deg) scale(1);
+        transform: translateY(0) rotate(0deg) scale(2);
     }
     100% {
         opacity: 0;
