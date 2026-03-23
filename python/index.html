@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brett Rhyne - Learn Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/elegant.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/">brettrhyne.com</a>
+            <ul>
+                <li><a href="#shell">Python Shell</a></li>
+                <li><a href="#problems">Practice</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Learn Python by Doing</h1>
+            <p>An interactive Python shell right in your browser. No setup required.</p>
+        </section>
+
+        <section id="shell">
+            <h2>Python Shell</h2>
+            <div id="editor-container">
+                <textarea id="code-editor">print("Hello, world!")</textarea>
+            </div>
+            <div id="controls">
+                <button id="run-btn" disabled>Loading Python...</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+            <div id="output-container">
+                <pre id="output"></pre>
+            </div>
+        </section>
+
+        <section id="problems">
+            <h2>Practice Problems</h2>
+            <div id="problem-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brett Rhyne</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+    <script src="problems.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
