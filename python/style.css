@@ -177,91 +177,68 @@ button:hover:not(:disabled) {
     margin-top: 2rem;
 }
 
-.problem-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    transition: border-color 0.2s;
-}
-
-.problem-card:hover {
-    border-color: var(--accent);
-}
-
-.problem-card h3 {
+#selector-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    gap: 1rem;
+    align-items: end;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
-.problem-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.difficulty {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
+#selector-row label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    color: var(--text-muted);
 }
 
-.difficulty.easy {
-    background: rgba(63, 185, 80, 0.15);
-    color: var(--green);
-}
-
-.difficulty.medium {
-    background: rgba(210, 153, 34, 0.15);
-    color: #d29922;
-}
-
-.difficulty.hard {
-    background: rgba(248, 81, 73, 0.15);
-    color: var(--red);
-}
-
-.problem-active {
-    border-color: var(--accent);
-}
-
-.problem-detail {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-    display: none;
-}
-
-.problem-active .problem-detail {
-    display: block;
-}
-
-.problem-detail pre {
-    background: var(--bg);
-    padding: 0.75rem;
+#selector-row select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
     border-radius: 6px;
-    font-size: 14px;
-    margin: 0.5rem 0;
-    overflow-x: auto;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+    min-width: 200px;
 }
 
-.problem-detail button {
-    margin-top: 0.5rem;
-}
-
-.load-btn {
+#generate-btn {
     background: var(--accent);
     border-color: var(--accent);
     color: #fff;
     font-weight: 600;
+    padding: 0.5rem 1.5rem;
 }
 
-.load-btn:hover {
+#generate-btn:hover {
     background: var(--accent-hover);
+}
+
+#problem-display {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+#problem-display h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+#problem-display p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#problem-display code {
+    background: var(--bg);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 footer {

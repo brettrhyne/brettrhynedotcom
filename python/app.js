@@ -1,8 +1,24 @@
 let pyodide = null;
 let editor = null;
 let activeProblem = null;
+let problemBank = [];
 
-// Initialize CodeMirror
+const CHAPTERS = [
+    { num: 1, name: "The Shell" },
+    { num: 2, name: "String Basics" },
+    { num: 3, name: "Variables" },
+    { num: 4, name: "For Loops" },
+    { num: 5, name: "If Statements" },
+    { num: 6, name: "Lists" },
+    { num: 7, name: "More About Strings" },
+    { num: 8, name: "Nested Loops" },
+    { num: 9, name: "Functions" },
+    { num: 10, name: "Boolean Operators" },
+    { num: 11, name: "Tic Tac Toe Project" },
+    { num: 12, name: "Dictionaries" },
+];
+
+// Initialize
 document.addEventListener("DOMContentLoaded", () => {
     editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
         mode: "python",
@@ -18,10 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     initPyodide();
-    renderProblems();
+    initSelector();
+    loadProblems();
 
     document.getElementById("run-btn").addEventListener("click", runCode);
     document.getElementById("clear-btn").addEventListener("click", clearOutput);
+    document.getElementById("generate-btn").addEventListener("click", generateProblem);
 });
 
 // Load Pyodide
@@ -35,6 +53,57 @@ async function initPyodide() {
         btn.textContent = "Failed to load Python";
         console.error(e);
     }
+}
+
+// Load problem bank
+async function loadProblems() {
+    try {
+        const resp = await fetch("problems.json");
+        problemBank = await resp.json();
+    } catch (e) {
+        console.error("Failed to load problems:", e);
+    }
+}
+
+// Initialize chapter selector
+function initSelector() {
+    const chapterSelect = document.getElementById("chapter-select");
+    CHAPTERS.forEach((ch) => {
+        const opt = document.createElement("option");
+        opt.value = ch.num;
+        opt.textContent = ch.num + ". " + ch.name;
+        chapterSelect.appendChild(opt);
+    });
+}
+
+// Pick a random problem matching filters
+function generateProblem() {
+    const chapter = parseInt(document.getElementById("chapter-select").value);
+    const difficulty = parseInt(document.getElementById("difficulty-select").value);
+
+    const matches = problemBank.filter(
+        (p) => p.chapter === chapter && p.difficulty === difficulty
+    );
+
+    if (matches.length === 0) {
+        document.getElementById("problem-display").style.display = "block";
+        document.getElementById("problem-title").textContent = "No problems found";
+        document.getElementById("problem-description").textContent =
+            "No problems available for this chapter and difficulty yet.";
+        return;
+    }
+
+    const problem = matches[Math.floor(Math.random() * matches.length)];
+    activeProblem = problem;
+
+    document.getElementById("problem-display").style.display = "block";
+    document.getElementById("problem-title").textContent = problem.title;
+    document.getElementById("problem-description").innerHTML = problem.description;
+
+    editor.setValue(problem.starter);
+    document.getElementById("output").textContent = "";
+    document.getElementById("output").className = "";
+    document.getElementById("shell").scrollIntoView({ behavior: "smooth" });
 }
 
 // Run code
@@ -51,7 +120,6 @@ async function runCode() {
 
     let output = [];
 
-    // Use Pyodide's native stdout/stderr capture
     pyodide.setStdout({ batched: (text) => output.push(text) });
     pyodide.setStderr({ batched: (text) => output.push(text) });
 
@@ -60,7 +128,6 @@ async function runCode() {
         const actual = output.join("\n");
         outputEl.textContent = actual || "(no output)";
 
-        // Check against expected output if a problem is loaded
         if (activeProblem && activeProblem.expected) {
             const expected = activeProblem.expected.trim();
             if (actual.trim() === expected) {
@@ -81,47 +148,8 @@ async function runCode() {
 }
 
 function clearOutput() {
-    const outputEl = document.getElementById("output");
-    outputEl.textContent = "";
-    outputEl.className = "";
-}
-
-// Render problem cards
-function renderProblems() {
-    const container = document.getElementById("problem-list");
-
-    PROBLEMS.forEach((problem) => {
-        const card = document.createElement("div");
-        card.className = "problem-card";
-        card.innerHTML = `
-            <h3>
-                ${problem.title}
-                <span class="difficulty ${problem.difficulty}">${problem.difficulty}</span>
-            </h3>
-            <p>${problem.description}</p>
-            <div class="problem-detail">
-                <strong>Examples:</strong>
-                <pre>${problem.examples}</pre>
-                <button class="load-btn" data-id="${problem.id}">Load in Editor</button>
-            </div>
-        `;
-
-        card.addEventListener("click", (e) => {
-            if (e.target.classList.contains("load-btn")) return;
-            card.classList.toggle("problem-active");
-        });
-
-        const loadBtn = card.querySelector(".load-btn");
-        loadBtn.addEventListener("click", () => {
-            activeProblem = problem;
-            editor.setValue(problem.starter);
-            document.getElementById("output").textContent = "";
-            document.getElementById("output").className = "";
-            document.getElementById("shell").scrollIntoView({ behavior: "smooth" });
-        });
-
-        container.appendChild(card);
-    });
+    document.getElementById("output").textContent = "";
+    document.getElementById("output").className = "";
 }
 
 // Sparkles

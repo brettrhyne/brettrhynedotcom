@@ -1,0 +1,877 @@
+[
+  {
+    "id": 1, "chapter": 1, "difficulty": 1,
+    "title": "Simple Addition",
+    "description": "Print the result of 5 + 3.",
+    "starter": "",
+    "expected": "8"
+  },
+  {
+    "id": 2, "chapter": 1, "difficulty": 1,
+    "title": "Multiply",
+    "description": "Print the result of 4 times 7.",
+    "starter": "",
+    "expected": "28"
+  },
+  {
+    "id": 3, "chapter": 1, "difficulty": 1,
+    "title": "Subtract",
+    "description": "Print the result of 20 minus 8.",
+    "starter": "",
+    "expected": "12"
+  },
+  {
+    "id": 4, "chapter": 1, "difficulty": 1,
+    "title": "Divide",
+    "description": "Print the result of 15 divided by 3.",
+    "starter": "",
+    "expected": "5.0"
+  },
+  {
+    "id": 5, "chapter": 1, "difficulty": 1,
+    "title": "Three Numbers",
+    "description": "Print the result of 2 + 3 + 4.",
+    "starter": "",
+    "expected": "9"
+  },
+  {
+    "id": 6, "chapter": 1, "difficulty": 2,
+    "title": "Order of Operations",
+    "description": "What does <code>2 + 3 * 4</code> equal? Print it.",
+    "starter": "",
+    "expected": "14"
+  },
+  {
+    "id": 7, "chapter": 1, "difficulty": 2,
+    "title": "Parentheses First",
+    "description": "What does <code>(2 + 3) * 4</code> equal? Print it.",
+    "starter": "",
+    "expected": "20"
+  },
+  {
+    "id": 8, "chapter": 1, "difficulty": 2,
+    "title": "Mixed Operations",
+    "description": "What does <code>10 + 6 / 2</code> equal? Print it.",
+    "starter": "",
+    "expected": "13.0"
+  },
+  {
+    "id": 9, "chapter": 1, "difficulty": 2,
+    "title": "Double a Sum",
+    "description": "Add 7 and 3, then multiply the result by 2. Print the answer.",
+    "starter": "",
+    "expected": "20"
+  },
+  {
+    "id": 10, "chapter": 1, "difficulty": 2,
+    "title": "Divide a Difference",
+    "description": "Subtract 40 from 100, then divide by 3. Print the answer.",
+    "starter": "",
+    "expected": "20.0"
+  },
+  {
+    "id": 11, "chapter": 1, "difficulty": 3,
+    "title": "Nested Math",
+    "description": "Compute <code>((5 + 3) * 2) - 4</code> and print the result.",
+    "starter": "",
+    "expected": "12"
+  },
+  {
+    "id": 12, "chapter": 1, "difficulty": 3,
+    "title": "Average of Two",
+    "description": "What is the average of 8 and 12? Print it.",
+    "starter": "",
+    "expected": "10.0"
+  },
+  {
+    "id": 13, "chapter": 1, "difficulty": 3,
+    "title": "Remainder",
+    "description": "What is the remainder when 17 is divided by 5? Print it.",
+    "starter": "",
+    "expected": "2"
+  },
+  {
+    "id": 14, "chapter": 1, "difficulty": 3,
+    "title": "Integer Division",
+    "description": "Divide 17 by 5 but drop the decimal part. Print the result.",
+    "starter": "",
+    "expected": "3"
+  },
+  {
+    "id": 15, "chapter": 1, "difficulty": 3,
+    "title": "Two Groups",
+    "description": "Multiply (10 - 2) by (3 + 1). Print the result.",
+    "starter": "",
+    "expected": "32"
+  },
+  {
+    "id": 16, "chapter": 1, "difficulty": 4,
+    "title": "Two Kinds of Division",
+    "description": "Print 100 divided by 4 on one line, then print 100 integer-divided by 4 on the next.",
+    "starter": "",
+    "expected": "25.0\n25"
+  },
+  {
+    "id": 17, "chapter": 1, "difficulty": 4,
+    "title": "Seconds in a Day",
+    "description": "How many seconds are in a day? Print the answer.",
+    "starter": "",
+    "expected": "86400"
+  },
+  {
+    "id": 18, "chapter": 1, "difficulty": 4,
+    "title": "Fahrenheit to Celsius",
+    "description": "Normal body temperature is 98.6 °F. Convert it to Celsius and print the result. The formula is (F - 32) * 5 / 9.",
+    "starter": "",
+    "expected": "37.0"
+  },
+  {
+    "id": 19, "chapter": 1, "difficulty": 4,
+    "title": "Powers",
+    "description": "What is 2 to the 10th power? Print it.",
+    "starter": "",
+    "expected": "1024"
+  },
+  {
+    "id": 20, "chapter": 1, "difficulty": 4,
+    "title": "Tip Calculator",
+    "description": "A meal costs $45. How much is an 18% tip? Print the amount.",
+    "starter": "",
+    "expected": "8.1"
+  },
+  {
+    "id": 21, "chapter": 1, "difficulty": 5,
+    "title": "Three Results",
+    "description": "Print three things, each on its own line: 2 to the 8th power, then 256 divided by 16, then the remainder of 256 divided by 100.",
+    "starter": "",
+    "expected": "256\n16.0\n56"
+  },
+  {
+    "id": 22, "chapter": 1, "difficulty": 5,
+    "title": "Circle Area",
+    "description": "What is the area of a circle with radius 7? Use 3.14159 for pi. Print the result.",
+    "starter": "",
+    "expected": "153.93791"
+  },
+  {
+    "id": 23, "chapter": 1, "difficulty": 5,
+    "title": "Cookie Split",
+    "description": "47 cookies are shared equally among 5 friends. Print how many each person gets on one line, then how many are left over on the next.",
+    "starter": "",
+    "expected": "9\n2"
+  },
+  {
+    "id": 24, "chapter": 1, "difficulty": 5,
+    "title": "Long Expression",
+    "description": "Compute <code>((15 + 5) * 3 - 10) / 2</code> and print the result.",
+    "starter": "",
+    "expected": "25.0"
+  },
+  {
+    "id": 25, "chapter": 1, "difficulty": 5,
+    "title": "Distance and Midpoint",
+    "description": "Two points are at positions 3 and 15. Print the distance between them on one line, then the midpoint on the next.",
+    "starter": "",
+    "expected": "12\n9.0"
+  },
+  {
+    "id": 26, "chapter": 2, "difficulty": 1,
+    "title": "Say Hello",
+    "description": "Print <code>Hello!</code>",
+    "starter": "",
+    "expected": "Hello!"
+  },
+  {
+    "id": 27, "chapter": 2, "difficulty": 1,
+    "title": "Favorite Color",
+    "description": "Print the word <code>blue</code>.",
+    "starter": "",
+    "expected": "blue"
+  },
+  {
+    "id": 28, "chapter": 2, "difficulty": 1,
+    "title": "Good Morning",
+    "description": "Print <code>Good morning</code>.",
+    "starter": "",
+    "expected": "Good morning"
+  },
+  {
+    "id": 29, "chapter": 2, "difficulty": 1,
+    "title": "Number as Text",
+    "description": "Print <code>42</code> as a text string, not a math expression.",
+    "starter": "",
+    "expected": "42"
+  },
+  {
+    "id": 30, "chapter": 2, "difficulty": 1,
+    "title": "Exclamation",
+    "description": "Print <code>Wow!</code>",
+    "starter": "",
+    "expected": "Wow!"
+  },
+  {
+    "id": 31, "chapter": 2, "difficulty": 2,
+    "title": "Two Words Together",
+    "description": "Print <code>Hello World</code> by combining two separate strings.",
+    "starter": "",
+    "expected": "Hello World"
+  },
+  {
+    "id": 32, "chapter": 2, "difficulty": 2,
+    "title": "Full Name",
+    "description": "Print <code>Ada Lovelace</code> by combining a first name, a space, and a last name.",
+    "starter": "",
+    "expected": "Ada Lovelace"
+  },
+  {
+    "id": 33, "chapter": 2, "difficulty": 2,
+    "title": "Repetition",
+    "description": "Print <code>HaHaHa</code>. Don't type it out letter by letter — find a shorter way.",
+    "starter": "",
+    "expected": "HaHaHa"
+  },
+  {
+    "id": 34, "chapter": 2, "difficulty": 2,
+    "title": "Dashes",
+    "description": "Print a line of exactly 10 dashes.",
+    "starter": "",
+    "expected": "----------"
+  },
+  {
+    "id": 35, "chapter": 2, "difficulty": 2,
+    "title": "Greeting",
+    "description": "Print <code>Hi, Brett!</code> by combining separate string pieces.",
+    "starter": "",
+    "expected": "Hi, Brett!"
+  },
+  {
+    "id": 36, "chapter": 2, "difficulty": 3,
+    "title": "Build a Sentence",
+    "description": "Print <code>I love Python</code> by combining three separate words.",
+    "starter": "",
+    "expected": "I love Python"
+  },
+  {
+    "id": 37, "chapter": 2, "difficulty": 3,
+    "title": "Box Top",
+    "description": "Print <code>+--------+</code>. The middle section is 8 dashes.",
+    "starter": "",
+    "expected": "+--------+"
+  },
+  {
+    "id": 38, "chapter": 2, "difficulty": 3,
+    "title": "Echo",
+    "description": "Print <code>echo... </code> repeated 3 times.",
+    "starter": "",
+    "expected": "echo... echo... echo... "
+  },
+  {
+    "id": 39, "chapter": 2, "difficulty": 3,
+    "title": "Two Lines",
+    "description": "Print <code>Hello</code> on the first line and <code>World</code> on the second.",
+    "starter": "",
+    "expected": "Hello\nWorld"
+  },
+  {
+    "id": 40, "chapter": 2, "difficulty": 3,
+    "title": "Surround",
+    "description": "Print <code>***hello***</code>.",
+    "starter": "",
+    "expected": "***hello***"
+  },
+  {
+    "id": 41, "chapter": 2, "difficulty": 4,
+    "title": "Name Tag",
+    "description": "Print a two-line name tag:<br><code>+-----------+</code><br><code>|   Brett   |</code>",
+    "starter": "",
+    "expected": "+-----------+\n|   Brett   |"
+  },
+  {
+    "id": 42, "chapter": 2, "difficulty": 4,
+    "title": "Chant",
+    "description": "Print <code>Go! Go! Go!</code>",
+    "starter": "",
+    "expected": "Go! Go! Go!"
+  },
+  {
+    "id": 43, "chapter": 2, "difficulty": 4,
+    "title": "Arrow",
+    "description": "Print this downward-pointing arrow:<br><code>&nbsp;&nbsp;*</code><br><code>&nbsp;***</code><br><code>*****</code>",
+    "starter": "",
+    "expected": "  *\n ***\n*****"
+  },
+  {
+    "id": 44, "chapter": 2, "difficulty": 4,
+    "title": "Ladder",
+    "description": "Print this ladder pattern:<br><code>|  |</code><br><code>|--|</code><br><code>|  |</code><br><code>|--|</code>",
+    "starter": "",
+    "expected": "|  |\n|--|\n|  |\n|--|"
+  },
+  {
+    "id": 45, "chapter": 2, "difficulty": 4,
+    "title": "Build an Email",
+    "description": "Print <code>brett@example.com</code> by combining five separate pieces: the username, @, the domain name, a dot, and the extension.",
+    "starter": "",
+    "expected": "brett@example.com"
+  },
+  {
+    "id": 46, "chapter": 2, "difficulty": 5,
+    "title": "Simple Box",
+    "description": "Print a box around the word Hi:<br><code>+----+</code><br><code>| Hi |</code><br><code>+----+</code>",
+    "starter": "",
+    "expected": "+----+\n| Hi |\n+----+"
+  },
+  {
+    "id": 47, "chapter": 2, "difficulty": 5,
+    "title": "Diamond",
+    "description": "Print this diamond:<br><code>&nbsp;&nbsp;*</code><br><code>&nbsp;***</code><br><code>*****</code><br><code>&nbsp;***</code><br><code>&nbsp;&nbsp;*</code>",
+    "starter": "",
+    "expected": "  *\n ***\n*****\n ***\n  *"
+  },
+  {
+    "id": 48, "chapter": 2, "difficulty": 5,
+    "title": "Table Header",
+    "description": "Print a small table header:<br><code>&nbsp;&nbsp;1  2  3</code><br><code>---------</code>",
+    "starter": "",
+    "expected": "  1  2  3\n---------"
+  },
+  {
+    "id": 49, "chapter": 2, "difficulty": 5,
+    "title": "Zigzag",
+    "description": "Print this two-line zigzag:<br><code>/\\/\\/\\</code><br><code>\\/\\/\\/</code>",
+    "starter": "",
+    "expected": "/\\/\\/\\\n\\/\\/\\/"
+  },
+  {
+    "id": 50, "chapter": 2, "difficulty": 5,
+    "title": "Block Initials",
+    "description": "Print block-letter initials for B and R:<br><code>##  ###</code><br><code>##  ##</code><br><code>##  ###</code>",
+    "starter": "",
+    "expected": "##  ###\n##  ##\n##  ###"
+  },
+  {
+    "id": 51, "chapter": 3, "difficulty": 1,
+    "title": "Store and Print",
+    "description": "Store the number 42 in a variable called <code>answer</code>, then print it.",
+    "starter": "",
+    "expected": "42"
+  },
+  {
+    "id": 52, "chapter": 3, "difficulty": 1,
+    "title": "Name Variable",
+    "description": "Store <code>'Alice'</code> in a variable called <code>name</code>, then print it.",
+    "starter": "",
+    "expected": "Alice"
+  },
+  {
+    "id": 53, "chapter": 3, "difficulty": 1,
+    "title": "Add Variables",
+    "description": "Create two variables, <code>a = 10</code> and <code>b = 20</code>. Print their sum.",
+    "starter": "a = 10\nb = 20\n",
+    "expected": "30"
+  },
+  {
+    "id": 54, "chapter": 3, "difficulty": 1,
+    "title": "Greeting Variable",
+    "description": "Store <code>'Hello!'</code> in a variable and print it.",
+    "starter": "",
+    "expected": "Hello!"
+  },
+  {
+    "id": 55, "chapter": 3, "difficulty": 1,
+    "title": "Favorite Number",
+    "description": "Store the number 7 in a variable and print it.",
+    "starter": "",
+    "expected": "7"
+  },
+  {
+    "id": 56, "chapter": 3, "difficulty": 2,
+    "title": "Personal Greeting",
+    "description": "Set <code>name = 'Sam'</code>. Print <code>Hello, Sam!</code>",
+    "starter": "name = 'Sam'\n",
+    "expected": "Hello, Sam!"
+  },
+  {
+    "id": 57, "chapter": 3, "difficulty": 2,
+    "title": "Area",
+    "description": "Set <code>width = 5</code> and <code>height = 3</code>. Print the area of the rectangle.",
+    "starter": "width = 5\nheight = 3\n",
+    "expected": "15"
+  },
+  {
+    "id": 58, "chapter": 3, "difficulty": 2,
+    "title": "Increment",
+    "description": "Set <code>count = 1</code>. Add 1 to it. Print the new value.",
+    "starter": "count = 1\n",
+    "expected": "2"
+  },
+  {
+    "id": 59, "chapter": 3, "difficulty": 2,
+    "title": "Two Variables",
+    "description": "Set <code>x = 'left'</code> and <code>y = 'right'</code>. Print each on its own line.",
+    "starter": "x = 'left'\ny = 'right'\n",
+    "expected": "left\nright"
+  },
+  {
+    "id": 60, "chapter": 3, "difficulty": 2,
+    "title": "Total Price",
+    "description": "An item costs $10 and you're buying 4. Print the total.",
+    "starter": "price = 10\nquantity = 4\n",
+    "expected": "40"
+  },
+  {
+    "id": 61, "chapter": 3, "difficulty": 3,
+    "title": "Full Name",
+    "description": "Set <code>first = 'Ada'</code> and <code>last = 'Lovelace'</code>. Print their full name with a space between.",
+    "starter": "first = 'Ada'\nlast = 'Lovelace'\n",
+    "expected": "Ada Lovelace"
+  },
+  {
+    "id": 62, "chapter": 3, "difficulty": 3,
+    "title": "Celsius to Fahrenheit",
+    "description": "It's 25°C outside. What is that in Fahrenheit? The formula is C * 9 / 5 + 32. Print the result.",
+    "starter": "celsius = 25\n",
+    "expected": "77.0"
+  },
+  {
+    "id": 63, "chapter": 3, "difficulty": 3,
+    "title": "Running Total",
+    "description": "Start with <code>total = 0</code>. Add 5, then 10, then 3 to it. Print the final total.",
+    "starter": "total = 0\n",
+    "expected": "18"
+  },
+  {
+    "id": 64, "chapter": 3, "difficulty": 3,
+    "title": "Label a Value",
+    "description": "Set <code>age = 15</code>. Print <code>Age: 15</code> — the number should come from the variable, not be typed directly.",
+    "starter": "age = 15\n",
+    "expected": "Age: 15"
+  },
+  {
+    "id": 65, "chapter": 3, "difficulty": 3,
+    "title": "Rectangle Info",
+    "description": "A rectangle is 8 wide and 3 tall. Print its area on one line and its perimeter on the next.",
+    "starter": "w = 8\nh = 3\n",
+    "expected": "24\n22"
+  },
+  {
+    "id": 66, "chapter": 3, "difficulty": 4,
+    "title": "Mad Libs",
+    "description": "Set <code>animal = 'cat'</code> and <code>action = 'jumped'</code>. Print <code>The cat jumped over the moon.</code> — the animal and action should come from the variables.",
+    "starter": "animal = 'cat'\naction = 'jumped'\n",
+    "expected": "The cat jumped over the moon."
+  },
+  {
+    "id": 67, "chapter": 3, "difficulty": 4,
+    "title": "Counting Up",
+    "description": "Start at 1. Print the number, add 1, print, add 1, print. Output should be 1, 2, 3 on separate lines.",
+    "starter": "x = 1\n",
+    "expected": "1\n2\n3"
+  },
+  {
+    "id": 68, "chapter": 3, "difficulty": 4,
+    "title": "Three Greetings",
+    "description": "Set <code>name = 'Zoe'</code>. Print <code>Hi Zoe!</code> three times, each on its own line. The name should come from the variable.",
+    "starter": "name = 'Zoe'\n",
+    "expected": "Hi Zoe!\nHi Zoe!\nHi Zoe!"
+  },
+  {
+    "id": 69, "chapter": 3, "difficulty": 4,
+    "title": "Bill Splitter",
+    "description": "A $60 bill is split among 4 friends. Print how much each person pays (whole dollars only) on one line, and how much is left over on the next.",
+    "starter": "total = 60\npeople = 4\n",
+    "expected": "15\n0"
+  },
+  {
+    "id": 70, "chapter": 3, "difficulty": 4,
+    "title": "Fruit Report",
+    "description": "Set <code>fruit = 'apple'</code> and <code>count = 3</code>. Print <code>I have 3 apples.</code> — the number and fruit should come from the variables.",
+    "starter": "fruit = 'apple'\ncount = 3\n",
+    "expected": "I have 3 apples."
+  },
+  {
+    "id": 71, "chapter": 3, "difficulty": 5,
+    "title": "Sale Price",
+    "description": "A $50 item is 20% off. Print the discount amount, the sale price, and the tax (8% of the sale price) — each on its own line.",
+    "starter": "price = 50\n",
+    "expected": "10.0\n40.0\n3.2"
+  },
+  {
+    "id": 72, "chapter": 3, "difficulty": 5,
+    "title": "Name in Stars",
+    "description": "Set <code>name = 'Brett'</code>. Print a decorated box:<br><code>***********</code><br><code>*  Brett  *</code><br><code>***********</code>",
+    "starter": "name = 'Brett'\n",
+    "expected": "***********\n*  Brett  *\n***********"
+  },
+  {
+    "id": 73, "chapter": 3, "difficulty": 5,
+    "title": "Rotate Three",
+    "description": "Set <code>a = 1</code>, <code>b = 2</code>, <code>c = 3</code>. Rotate the values so a gets b's value, b gets c's, and c gets a's original. Print a, b, c on separate lines.",
+    "starter": "a = 1\nb = 2\nc = 3\n",
+    "expected": "2\n3\n1"
+  },
+  {
+    "id": 74, "chapter": 3, "difficulty": 5,
+    "title": "Receipt",
+    "description": "Print a receipt using the given variables:<br><code>Item: Widget</code><br><code>Qty: 3</code><br><code>Total: 15</code>",
+    "starter": "item = 'Widget'\nqty = 3\nunit_price = 5\n",
+    "expected": "Item: Widget\nQty: 3\nTotal: 15"
+  },
+  {
+    "id": 75, "chapter": 3, "difficulty": 5,
+    "title": "Countdown",
+    "description": "Start at 5 and count down to 1, printing each number on its own line.",
+    "starter": "n = 5\n",
+    "expected": "5\n4\n3\n2\n1"
+  },
+  {
+    "id": 76, "chapter": 4, "difficulty": 1,
+    "title": "Spell It Out",
+    "description": "Print each character of <code>'hello'</code> on its own line.",
+    "starter": "",
+    "expected": "h\ne\nl\nl\no"
+  },
+  {
+    "id": 77, "chapter": 4, "difficulty": 1,
+    "title": "Name Letters",
+    "description": "Print each character of <code>'Brett'</code> on its own line.",
+    "starter": "",
+    "expected": "B\nr\ne\nt\nt"
+  },
+  {
+    "id": 78, "chapter": 4, "difficulty": 1,
+    "title": "Three Stars",
+    "description": "Print a star on each of three lines.",
+    "starter": "",
+    "expected": "*\n*\n*"
+  },
+  {
+    "id": 79, "chapter": 4, "difficulty": 1,
+    "title": "Spell a Word",
+    "description": "Set <code>word = 'cat'</code>. Print each letter on its own line.",
+    "starter": "word = 'cat'\n",
+    "expected": "c\na\nt"
+  },
+  {
+    "id": 80, "chapter": 4, "difficulty": 1,
+    "title": "Digits",
+    "description": "Print each character of <code>'12345'</code> on its own line.",
+    "starter": "",
+    "expected": "1\n2\n3\n4\n5"
+  },
+  {
+    "id": 81, "chapter": 4, "difficulty": 2,
+    "title": "Shout It",
+    "description": "Given <code>'hey'</code>, print <code>h!e!y!</code> — each letter followed by an exclamation mark.",
+    "starter": "word = 'hey'\n",
+    "expected": "h!e!y!"
+  },
+  {
+    "id": 82, "chapter": 4, "difficulty": 2,
+    "title": "Number the Letters",
+    "description": "Given <code>'abc'</code>, print <code>1a2b3c</code> — each letter preceded by its position (starting at 1).",
+    "starter": "word = 'abc'\n",
+    "expected": "1a2b3c"
+  },
+  {
+    "id": 83, "chapter": 4, "difficulty": 2,
+    "title": "Double Up",
+    "description": "Given <code>'hi'</code>, print <code>hhii</code> — each letter appearing twice.",
+    "starter": "word = 'hi'\n",
+    "expected": "hhii"
+  },
+  {
+    "id": 84, "chapter": 4, "difficulty": 2,
+    "title": "Triple Up",
+    "description": "Given <code>'ab'</code>, print <code>aaabbb</code> — each letter appearing three times.",
+    "starter": "word = 'ab'\n",
+    "expected": "aaabbb"
+  },
+  {
+    "id": 85, "chapter": 4, "difficulty": 2,
+    "title": "Trailing Dots",
+    "description": "Given <code>'go'</code>, print <code>g...o...</code> — each letter followed by three dots.",
+    "starter": "word = 'go'\n",
+    "expected": "g...o..."
+  },
+  {
+    "id": 86, "chapter": 4, "difficulty": 3,
+    "title": "How Long?",
+    "description": "Given <code>'python'</code>, figure out how many characters it has and print the count. Don't just type 6 — your code should work for any word.",
+    "starter": "word = 'python'\n",
+    "expected": "6"
+  },
+  {
+    "id": 87, "chapter": 4, "difficulty": 3,
+    "title": "Parenthesize",
+    "description": "Given <code>'hi'</code>, print <code>(h)(i)</code> — each letter wrapped in parentheses.",
+    "starter": "word = 'hi'\n",
+    "expected": "(h)(i)"
+  },
+  {
+    "id": 88, "chapter": 4, "difficulty": 3,
+    "title": "Mirror",
+    "description": "Given <code>'abc'</code>, print <code>abccba</code> — the word followed by itself backwards.",
+    "starter": "word = 'abc'\n",
+    "expected": "abccba"
+  },
+  {
+    "id": 89, "chapter": 4, "difficulty": 3,
+    "title": "Growing Line",
+    "description": "Print a growing line of stars, one more each time, for 3 lines:<br><code>*</code><br><code>**</code><br><code>***</code>",
+    "starter": "",
+    "expected": "*\n**\n***"
+  },
+  {
+    "id": 90, "chapter": 4, "difficulty": 3,
+    "title": "Backwards",
+    "description": "Given <code>'hello'</code>, print it backwards: <code>olleh</code>.",
+    "starter": "word = 'hello'\n",
+    "expected": "olleh"
+  },
+  {
+    "id": 91, "chapter": 4, "difficulty": 4,
+    "title": "Stretch",
+    "description": "Given <code>'abc'</code>, print <code>abbccc</code> — the first letter once, the second letter twice, the third letter three times.",
+    "starter": "word = 'abc'\n",
+    "expected": "abbccc"
+  },
+  {
+    "id": 92, "chapter": 4, "difficulty": 4,
+    "title": "Stretch a Word",
+    "description": "Given <code>'hey'</code>, print <code>heeyyy</code> — each letter repeated by its position.",
+    "starter": "word = 'hey'\n",
+    "expected": "heeyyy"
+  },
+  {
+    "id": 93, "chapter": 4, "difficulty": 4,
+    "title": "Numbered Lines",
+    "description": "Given <code>'abc'</code>, print each letter on its own line with a number:<br><code>1. a</code><br><code>2. b</code><br><code>3. c</code>",
+    "starter": "word = 'abc'\n",
+    "expected": "1. a\n2. b\n3. c"
+  },
+  {
+    "id": 94, "chapter": 4, "difficulty": 4,
+    "title": "Triangle",
+    "description": "Print a triangle that grows from 1 star to 5:<br><code>*</code><br><code>**</code><br><code>***</code><br><code>****</code><br><code>*****</code>",
+    "starter": "",
+    "expected": "*\n**\n***\n****\n*****"
+  },
+  {
+    "id": 95, "chapter": 4, "difficulty": 4,
+    "title": "Wrap Each Letter",
+    "description": "Given <code>'abc'</code>, print <code>[a][b][c]</code> — each letter in square brackets.",
+    "starter": "word = 'abc'\n",
+    "expected": "[a][b][c]"
+  },
+  {
+    "id": 96, "chapter": 4, "difficulty": 5,
+    "title": "Right-Aligned Staircase",
+    "description": "Print a right-aligned staircase of 5 steps:<br><code>&nbsp;&nbsp;&nbsp;&nbsp;#</code><br><code>&nbsp;&nbsp;&nbsp;##</code><br><code>&nbsp;&nbsp;###</code><br><code>&nbsp;####</code><br><code>#####</code>",
+    "starter": "",
+    "expected": "    #\n   ##\n  ###\n ####\n#####"
+  },
+  {
+    "id": 97, "chapter": 4, "difficulty": 5,
+    "title": "Forward and Backward",
+    "description": "Given <code>'abc'</code>, print it forwards on one line and backwards on the next:<br><code>abc</code><br><code>cba</code>",
+    "starter": "word = 'abc'\n",
+    "expected": "abc\ncba"
+  },
+  {
+    "id": 98, "chapter": 4, "difficulty": 5,
+    "title": "Position Bookends",
+    "description": "Given <code>'cat'</code>, surround each letter with its position number. Print: <code>1c12a23t3</code>",
+    "starter": "word = 'cat'\n",
+    "expected": "1c12a23t3"
+  },
+  {
+    "id": 99, "chapter": 4, "difficulty": 5,
+    "title": "Frame a Word",
+    "description": "Given <code>'hello'</code>, print it inside a frame:<br><code>+---------+</code><br><code>|  hello  |</code><br><code>+---------+</code><br>Your code should figure out the right number of dashes — don't just count by hand.",
+    "starter": "word = 'hello'\n",
+    "expected": "+---------+\n|  hello  |\n+---------+"
+  },
+  {
+    "id": 100, "chapter": 4, "difficulty": 5,
+    "title": "Letter Pyramid",
+    "description": "Given <code>'abcd'</code>, print a centered pyramid:<br><code>&nbsp;&nbsp;&nbsp;a</code><br><code>&nbsp;&nbsp;bab</code><br><code>&nbsp;cbabc</code><br><code>dcbabcd</code>",
+    "starter": "word = 'abcd'\n",
+    "expected": "   a\n  bab\n cbabc\ndcbabcd"
+  },
+  {
+    "id": 101, "chapter": 5, "difficulty": 1,
+    "title": "Big or Small",
+    "description": "Set <code>x = 100</code>. If it's greater than 50, print <code>big</code>. Otherwise print <code>small</code>.",
+    "starter": "x = 100\n",
+    "expected": "big"
+  },
+  {
+    "id": 102, "chapter": 5, "difficulty": 1,
+    "title": "Same or Different",
+    "description": "Set <code>a = 5</code> and <code>b = 5</code>. If they're equal, print <code>same</code>. Otherwise print <code>different</code>.",
+    "starter": "a = 5\nb = 5\n",
+    "expected": "same"
+  },
+  {
+    "id": 103, "chapter": 5, "difficulty": 1,
+    "title": "Sign Check",
+    "description": "Set <code>n = -3</code>. If it's 0 or positive, print <code>positive</code>. Otherwise print <code>negative</code>.",
+    "starter": "n = -3\n",
+    "expected": "negative"
+  },
+  {
+    "id": 104, "chapter": 5, "difficulty": 1,
+    "title": "Password Gate",
+    "description": "Set <code>password = 'abc123'</code>. If it matches the correct password <code>'abc123'</code>, print <code>Access granted</code>. Otherwise print <code>Wrong password</code>.",
+    "starter": "password = 'abc123'\n",
+    "expected": "Access granted"
+  },
+  {
+    "id": 105, "chapter": 5, "difficulty": 1,
+    "title": "Even or Odd",
+    "description": "Is the number 7 even or odd? Print <code>even</code> or <code>odd</code>.",
+    "starter": "num = 7\n",
+    "expected": "odd"
+  },
+  {
+    "id": 106, "chapter": 5, "difficulty": 2,
+    "title": "Letter Grade",
+    "description": "A student scored 85 on a test. Print their letter grade: A (90+), B (80+), C (70+), or F.",
+    "starter": "score = 85\n",
+    "expected": "B"
+  },
+  {
+    "id": 107, "chapter": 5, "difficulty": 2,
+    "title": "Make Positive",
+    "description": "Set <code>x = -15</code>. Print its absolute value (make it positive if it's negative).",
+    "starter": "x = -15\n",
+    "expected": "15"
+  },
+  {
+    "id": 108, "chapter": 5, "difficulty": 2,
+    "title": "Ticket Price",
+    "description": "A child (under 12) pays $5, an adult pays $10, and a senior (65+) pays $7. How much does a 10-year-old pay? Print the price.",
+    "starter": "age = 10\n",
+    "expected": "5"
+  },
+  {
+    "id": 109, "chapter": 5, "difficulty": 2,
+    "title": "Larger of Two",
+    "description": "Set <code>a = 8</code> and <code>b = 12</code>. Print whichever is larger.",
+    "starter": "a = 8\nb = 12\n",
+    "expected": "12"
+  },
+  {
+    "id": 110, "chapter": 5, "difficulty": 2,
+    "title": "Case Check",
+    "description": "Set <code>letter = 'A'</code>. Print <code>uppercase</code> or <code>lowercase</code>.",
+    "starter": "letter = 'A'\n",
+    "expected": "uppercase"
+  },
+  {
+    "id": 111, "chapter": 5, "difficulty": 3,
+    "title": "Fizz Buzz",
+    "description": "Set <code>n = 15</code>. If it's divisible by both 3 and 5, print <code>FizzBuzz</code>. If only by 3, print <code>Fizz</code>. If only by 5, print <code>Buzz</code>. Otherwise print the number.",
+    "starter": "n = 15\n",
+    "expected": "FizzBuzz"
+  },
+  {
+    "id": 112, "chapter": 5, "difficulty": 3,
+    "title": "Character Census",
+    "description": "How many uppercase letters, lowercase letters, spaces, and other characters are in <code>'Hello World!'</code>? Print each count on its own line (in that order).",
+    "starter": "text = 'Hello World!'\n",
+    "expected": "2\n8\n1\n1"
+  },
+  {
+    "id": 113, "chapter": 5, "difficulty": 3,
+    "title": "Clamp",
+    "description": "Set <code>x = 150</code>. Force it into the range 0–100 (if it's too high, make it 100; if too low, make it 0). Print the result.",
+    "starter": "x = 150\n",
+    "expected": "100"
+  },
+  {
+    "id": 114, "chapter": 5, "difficulty": 3,
+    "title": "Vowel or Consonant",
+    "description": "For each letter in <code>'python'</code>, print <code>V</code> if it's a vowel or <code>C</code> if it's a consonant.",
+    "starter": "word = 'python'\n",
+    "expected": "C\nC\nC\nC\nV\nC"
+  },
+  {
+    "id": 115, "chapter": 5, "difficulty": 3,
+    "title": "Smallest of Three",
+    "description": "Set <code>a = 7</code>, <code>b = 3</code>, <code>c = 9</code>. Print the smallest.",
+    "starter": "a = 7\nb = 3\nc = 9\n",
+    "expected": "3"
+  },
+  {
+    "id": 116, "chapter": 5, "difficulty": 4,
+    "title": "Leet Speak",
+    "description": "Convert <code>'danger zone'</code> to leet speak: replace every <code>a</code> with <code>@</code> and every <code>e</code> with <code>3</code>. Print the result.",
+    "starter": "text = 'danger zone'\n",
+    "expected": "d@ng3r zon3"
+  },
+  {
+    "id": 117, "chapter": 5, "difficulty": 4,
+    "title": "Running Max",
+    "description": "Go through the digits <code>'52819'</code> one at a time. After each digit, print the largest digit you've seen so far.",
+    "starter": "digits = '52819'\n",
+    "expected": "5\n5\n8\n8\n9"
+  },
+  {
+    "id": 118, "chapter": 5, "difficulty": 4,
+    "title": "Balanced Brackets",
+    "description": "Is <code>'(())'</code> balanced? (Same number of open and close parentheses.) Print <code>balanced</code> or <code>unbalanced</code>.",
+    "starter": "text = '(())'\n",
+    "expected": "balanced"
+  },
+  {
+    "id": 119, "chapter": 5, "difficulty": 4,
+    "title": "Swap Case",
+    "description": "Given <code>'Hello World'</code>, swap every letter's case — uppercase becomes lowercase and vice versa. Print the result.",
+    "starter": "text = 'Hello World'\n",
+    "expected": "hELLO wORLD"
+  },
+  {
+    "id": 120, "chapter": 5, "difficulty": 4,
+    "title": "Weather Advice",
+    "description": "It's 72°F. Print the appropriate advice: <code>Freezing!</code> (below 32), <code>Cold</code> (32–59), <code>Nice</code> (60–79), <code>Hot</code> (80–99), or <code>Extreme!</code> (100+).",
+    "starter": "temp = 72\n",
+    "expected": "Nice"
+  },
+  {
+    "id": 121, "chapter": 5, "difficulty": 5,
+    "title": "Vowel Shift",
+    "description": "Encrypt <code>'hello'</code> by shifting each vowel to the next vowel in the sequence a→e→i→o→u→a. Leave consonants alone. Print the result.",
+    "starter": "word = 'hello'\n",
+    "expected": "hillu"
+  },
+  {
+    "id": 122, "chapter": 5, "difficulty": 5,
+    "title": "Longest Streak",
+    "description": "What is the longest streak of the same character in a row in <code>'aabbbcccc'</code>? Print the length.",
+    "starter": "text = 'aabbbcccc'\n",
+    "expected": "4"
+  },
+  {
+    "id": 123, "chapter": 5, "difficulty": 5,
+    "title": "Word Score",
+    "description": "Score the word <code>'hello'</code>: vowels are worth 3 points each, consonants are worth 1 point each. Print the total.",
+    "starter": "word = 'hello'\n",
+    "expected": "9"
+  },
+  {
+    "id": 124, "chapter": 5, "difficulty": 5,
+    "title": "Caesar Decode",
+    "description": "The secret message <code>'ifmmp'</code> was encoded by shifting each letter one position forward in the alphabet. Decode it and print the original message.",
+    "starter": "alphabet = 'abcdefghijklmnopqrstuvwxyz'\nmessage = 'ifmmp'\n",
+    "expected": "hello"
+  },
+  {
+    "id": 125, "chapter": 5, "difficulty": 5,
+    "title": "Case Transitions",
+    "description": "How many times does the case change between consecutive letters in <code>'aAbBaA'</code>? (e.g., going from lowercase to uppercase counts as one transition.) Print the count.",
+    "starter": "text = 'aAbBaA'\n",
+    "expected": "5"
+  }
+]

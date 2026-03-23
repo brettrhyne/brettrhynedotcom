@@ -41,7 +41,29 @@
 
         <section id="problems">
             <h2>Practice Problems</h2>
-            <div id="problem-list"></div>
+            <div id="problem-selector">
+                <div id="selector-row">
+                    <label>
+                        Chapter
+                        <select id="chapter-select"></select>
+                    </label>
+                    <label>
+                        Difficulty
+                        <select id="difficulty-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </label>
+                    <button id="generate-btn">Give me a problem</button>
+                </div>
+                <div id="problem-display" style="display:none;">
+                    <h3 id="problem-title"></h3>
+                    <p id="problem-description"></p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -52,7 +74,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
-    <script src="problems.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
