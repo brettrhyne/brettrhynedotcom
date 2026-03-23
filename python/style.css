@@ -253,7 +253,7 @@ footer {
 .sparkle {
     position: fixed;
     pointer-events: none;
-    font-size: 16px;
+    font-size: 24px;
     z-index: 9999;
     animation: sparkle-fall linear forwards;
 }
