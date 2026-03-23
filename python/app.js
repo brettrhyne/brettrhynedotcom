@@ -152,13 +152,13 @@ function clearOutput() {
     document.getElementById("output").className = "";
 }
 
-// Sparkles
-const sparkleChars = ["\u2728", "\u2B50", "\uD83C\uDF1F", "\u2734\uFE0F", "\u00B7"];
+// Flowers
+const flowerChars = ["\uD83C\uDF38", "\uD83C\uDF3A", "\uD83C\uDF3B", "\uD83C\uDF37", "\uD83C\uDF3C", "\uD83C\uDF39"];
 
-function createSparkle(x, y) {
+function createFlower(x, y) {
     const el = document.createElement("span");
     el.className = "sparkle";
-    el.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+    el.textContent = flowerChars[Math.floor(Math.random() * flowerChars.length)];
     el.style.left = (x + (Math.random() - 0.5) * 30) + "px";
     el.style.top = (y + (Math.random() - 0.5) * 30) + "px";
     el.style.animationDuration = (1 + Math.random() * 1.5) + "s";
@@ -166,11 +166,11 @@ function createSparkle(x, y) {
     el.addEventListener("animationend", () => el.remove());
 }
 
-let sparkleTimer = 0;
+let flowerTimer = 0;
 document.addEventListener("mousemove", (e) => {
     const now = Date.now();
-    if (now - sparkleTimer > 80) {
-        sparkleTimer = now;
-        createSparkle(e.clientX, e.clientY);
+    if (now - flowerTimer > 80) {
+        flowerTimer = now;
+        createFlower(e.clientX, e.clientY);
     }
 });
