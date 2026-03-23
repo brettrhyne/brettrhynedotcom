@@ -1,131 +1,169 @@
 const PROBLEMS = [
   {
     id: 1,
-    title: "Hello Name",
+    title: "Greeting",
     difficulty: "easy",
     description:
-      'Write a function <code>hello(name)</code> that returns the string <code>"Hello, {name}!"</code>.',
-    examples:
-      'hello("Athena") → "Hello, Athena!"\nhello("World") → "Hello, World!"',
-    starter: "def hello(name):\n    # Your code here\n    pass",
+      'You have a variable <code>name</code>. Print <code>Hello, (name)!</code> using string concatenation.',
+    examples: 'If name = \'Athena\', print:\nHello, Athena!',
+    starter: "name = 'Athena'\n\n# Print a greeting using the name variable\n",
     tests: `
-assert hello("Athena") == "Hello, Athena!", f'Expected "Hello, Athena!", got {hello("Athena")!r}'
-assert hello("World") == "Hello, World!"
-assert hello("") == "Hello, !"
-print("All tests passed!")
+name = 'Athena'
+# Expected output:
+# Hello, Athena!
 `,
+    expected: "Hello, Athena!",
   },
   {
     id: 2,
-    title: "Sum of a List",
+    title: "Spell It Out",
     difficulty: "easy",
     description:
-      "Write a function <code>sum_list(nums)</code> that returns the sum of all numbers in a list. Do not use the built-in <code>sum()</code>.",
-    examples: "sum_list([1, 2, 3]) → 6\nsum_list([]) → 0",
-    starter: "def sum_list(nums):\n    # Your code here\n    pass",
+      "Use a <code>for</code> loop to print each character of a word on its own line.",
+    examples: "If word = 'hello', print:\nh\ne\nl\nl\no",
+    starter: "word = 'hello'\n\n# Print each character on its own line\n",
     tests: `
-assert sum_list([1, 2, 3]) == 6
-assert sum_list([]) == 0
-assert sum_list([-1, 1]) == 0
-assert sum_list([10]) == 10
-print("All tests passed!")
+word = 'hello'
+# Expected output:
+# h
+# e
+# l
+# l
+# o
 `,
+    expected: "h\ne\nl\nl\no",
   },
   {
     id: 3,
-    title: "FizzBuzz",
+    title: "Loud Word",
     difficulty: "easy",
     description:
-      'Write a function <code>fizzbuzz(n)</code> that returns a list of strings from 1 to n. For multiples of 3 use <code>"Fizz"</code>, for multiples of 5 use <code>"Buzz"</code>, for multiples of both use <code>"FizzBuzz"</code>, otherwise use the number as a string.',
-    examples: 'fizzbuzz(5) → ["1", "2", "Fizz", "4", "Buzz"]',
-    starter: "def fizzbuzz(n):\n    # Your code here\n    pass",
+      "Given a word, build a new string that is the uppercase version using <code>.upper()</code> inside a loop, then print it. Don't just do <code>print(word.upper())</code> — build it character by character with <code>+=</code>.",
+    examples: "If word = 'hello', print:\nHELLO",
+    starter: "word = 'hello'\nresult = ''\n\n# Loop through each character and build the uppercase version\n\nprint(result)",
     tests: `
-assert fizzbuzz(5) == ["1", "2", "Fizz", "4", "Buzz"]
-assert fizzbuzz(15)[-1] == "FizzBuzz"
-assert fizzbuzz(3) == ["1", "2", "Fizz"]
-print("All tests passed!")
+word = 'hello'
+result = ''
+# Expected output:
+# HELLO
 `,
+    expected: "HELLO",
   },
   {
     id: 4,
-    title: "Reverse a String",
+    title: "Count a Letter",
     difficulty: "easy",
     description:
-      "Write a function <code>reverse_string(s)</code> that returns the string reversed. Do not use slicing (<code>[::-1]</code>).",
-    examples: 'reverse_string("hello") → "olleh"\nreverse_string("ab") → "ba"',
-    starter: "def reverse_string(s):\n    # Your code here\n    pass",
+      "Count how many times the letter <code>'l'</code> appears in a word. Use a <code>for</code> loop and an <code>if</code> statement. Print the count at the end.",
+    examples: "If word = 'hello', print:\n2",
+    starter: "word = 'hello'\ncount = 0\n\n# Count how many times 'l' appears\n\nprint(count)",
     tests: `
-assert reverse_string("hello") == "olleh"
-assert reverse_string("a") == "a"
-assert reverse_string("") == ""
-assert reverse_string("ab") == "ba"
-print("All tests passed!")
+word = 'hello'
+count = 0
+# Expected output:
+# 2
 `,
+    expected: "2",
   },
   {
     id: 5,
-    title: "Count Vowels",
+    title: "Whisper or Shout",
     difficulty: "medium",
     description:
-      "Write a function <code>count_vowels(s)</code> that returns the number of vowels (a, e, i, o, u — case insensitive) in the string.",
-    examples: 'count_vowels("hello") → 2\ncount_vowels("AEIOU") → 5',
-    starter: "def count_vowels(s):\n    # Your code here\n    pass",
+      'Loop through each character in a word. If the character is an uppercase letter (it equals its own <code>.upper()</code> and doesn\'t equal its own <code>.lower()</code>), print <code>SHOUT</code>. Otherwise print <code>whisper</code>.',
+    examples: "If word = 'HeLLo', print:\nSHOUT\nwhisper\nSHOUT\nSHOUT\nwhisper",
+    starter: "word = 'HeLLo'\n\n# For each character, print SHOUT or whisper\n",
     tests: `
-assert count_vowels("hello") == 2
-assert count_vowels("AEIOU") == 5
-assert count_vowels("bcdfg") == 0
-assert count_vowels("") == 0
-print("All tests passed!")
+word = 'HeLLo'
+# Expected output:
+# SHOUT
+# whisper
+# SHOUT
+# SHOUT
+# whisper
 `,
+    expected: "SHOUT\nwhisper\nSHOUT\nSHOUT\nwhisper",
   },
   {
     id: 6,
-    title: "Is Palindrome",
+    title: "Remove Vowels",
     difficulty: "medium",
     description:
-      "Write a function <code>is_palindrome(s)</code> that returns <code>True</code> if the string is a palindrome (ignoring case and non-alphanumeric characters).",
-    examples:
-      'is_palindrome("racecar") → True\nis_palindrome("A man a plan a canal Panama") → True',
-    starter: "def is_palindrome(s):\n    # Your code here\n    pass",
+      "Build a new string from a word that contains only the consonants (skip a, e, i, o, u). Use <code>.lower()</code> to check each character, but keep the original character in the result.",
+    examples: "If word = 'Hello World', print:\nHll Wrld",
+    starter: "word = 'Hello World'\nresult = ''\n\n# Build a string with no vowels\n\nprint(result)",
     tests: `
-assert is_palindrome("racecar") == True
-assert is_palindrome("A man a plan a canal Panama") == True
-assert is_palindrome("hello") == False
-assert is_palindrome("") == True
-print("All tests passed!")
+word = 'Hello World'
+result = ''
+# Expected output:
+# Hll Wrld
 `,
+    expected: "Hll Wrld",
   },
   {
     id: 7,
-    title: "Two Sum",
+    title: "Secret Message",
     difficulty: "medium",
     description:
-      "Write a function <code>two_sum(nums, target)</code> that returns the indices of two numbers that add up to the target. Assume exactly one solution exists.",
-    examples:
-      "two_sum([2, 7, 11, 15], 9) → [0, 1]\ntwo_sum([3, 2, 4], 6) → [1, 2]",
-    starter: "def two_sum(nums, target):\n    # Your code here\n    pass",
+      "Loop through a message. Build a new string where every vowel (a, e, i, o, u — check using <code>.lower()</code>) is replaced with <code>*</code>. All other characters stay the same.",
+    examples: "If message = 'Keep it secret', print:\nK**p *t s*cr*t",
+    starter: "message = 'Keep it secret'\nresult = ''\n\n# Replace vowels with *\n\nprint(result)",
     tests: `
-assert sorted(two_sum([2, 7, 11, 15], 9)) == [0, 1]
-assert sorted(two_sum([3, 2, 4], 6)) == [1, 2]
-assert sorted(two_sum([3, 3], 6)) == [0, 1]
-print("All tests passed!")
+message = 'Keep it secret'
+result = ''
+# Expected output:
+# K**p *t s*cr*t
 `,
+    expected: "K**p *t s*cr*t",
   },
   {
     id: 8,
-    title: "Flatten a Nested List",
+    title: "Reverse a String",
+    difficulty: "medium",
+    description:
+      "Build a reversed version of a word using a <code>for</code> loop. Hint: add each new character <em>before</em> the result so far.",
+    examples: "If word = 'python', print:\nnohtyp",
+    starter: "word = 'python'\nresult = ''\n\n# Build the reversed string\n\nprint(result)",
+    tests: `
+word = 'python'
+result = ''
+# Expected output:
+# nohtyp
+`,
+    expected: "nohtyp",
+  },
+  {
+    id: 9,
+    title: "Letter Grade",
     difficulty: "hard",
     description:
-      "Write a function <code>flatten(lst)</code> that takes a nested list and returns a single flat list of all elements.",
-    examples:
-      "flatten([1, [2, [3, 4], 5]]) → [1, 2, 3, 4, 5]\nflatten([[1, 2], [3]]) → [1, 2, 3]",
-    starter: "def flatten(lst):\n    # Your code here\n    pass",
+      "Given a numeric score, print the letter grade. Use <code>if</code>/<code>elif</code>/<code>else</code>.<br>90 and above: <code>A</code><br>80-89: <code>B</code><br>70-79: <code>C</code><br>60-69: <code>D</code><br>Below 60: <code>F</code>",
+    examples: "If score = 85, print:\nB",
+    starter: "score = 85\n\n# Print the letter grade\n",
     tests: `
-assert flatten([1, [2, [3, 4], 5]]) == [1, 2, 3, 4, 5]
-assert flatten([[1, 2], [3]]) == [1, 2, 3]
-assert flatten([]) == []
-assert flatten([1, 2, 3]) == [1, 2, 3]
-print("All tests passed!")
+score = 85
+# Expected output:
+# B
 `,
+    expected: "B",
+  },
+  {
+    id: 10,
+    title: "Staircase",
+    difficulty: "hard",
+    description:
+      "Print a staircase pattern. For the word <code>'abcd'</code>, print each prefix on its own line: first just <code>a</code>, then <code>ab</code>, then <code>abc</code>, then <code>abcd</code>. Use a loop and string accumulation.",
+    examples: "If word = 'abcd', print:\na\nab\nabc\nabcd",
+    starter: "word = 'abcd'\nresult = ''\n\n# Print each prefix\n",
+    tests: `
+word = 'abcd'
+result = ''
+# Expected output:
+# a
+# ab
+# abc
+# abcd
+`,
+    expected: "a\nab\nabc\nabcd",
   },
 ];

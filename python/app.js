@@ -1,5 +1,6 @@
 let pyodide = null;
 let editor = null;
+let activeProblem = null;
 
 // Initialize CodeMirror
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,7 +57,20 @@ async function runCode() {
 
     try {
         await pyodide.runPythonAsync(code);
-        outputEl.textContent = output.join("\n") || "(no output)";
+        const actual = output.join("\n");
+        outputEl.textContent = actual || "(no output)";
+
+        // Check against expected output if a problem is loaded
+        if (activeProblem && activeProblem.expected) {
+            const expected = activeProblem.expected.trim();
+            if (actual.trim() === expected) {
+                outputEl.textContent += "\n\n--- Correct! ---";
+                outputEl.className = "output-success";
+            } else {
+                outputEl.textContent += "\n\n--- Expected output ---\n" + expected;
+                outputEl.className = "output-wrong";
+            }
+        }
     } catch (e) {
         outputEl.textContent = output.join("\n") + "\n" + e.message;
         outputEl.className = "output-error";
@@ -99,7 +113,10 @@ function renderProblems() {
 
         const loadBtn = card.querySelector(".load-btn");
         loadBtn.addEventListener("click", () => {
-            editor.setValue(problem.starter + "\n\n" + problem.tests.trim());
+            activeProblem = problem;
+            editor.setValue(problem.starter);
+            document.getElementById("output").textContent = "";
+            document.getElementById("output").className = "";
             document.getElementById("shell").scrollIntoView({ behavior: "smooth" });
         });
 

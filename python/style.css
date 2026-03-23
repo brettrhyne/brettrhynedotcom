@@ -164,6 +164,14 @@ button:hover:not(:disabled) {
     color: var(--red) !important;
 }
 
+.output-success {
+    color: var(--green) !important;
+}
+
+.output-wrong {
+    color: #b45309 !important;
+}
+
 /* Problems */
 #problems {
     margin-top: 2rem;
